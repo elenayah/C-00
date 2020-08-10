@@ -1,0 +1,294 @@
+Last login: Mon Aug 10 15:48:21 on ttys001 
+z3r10p4% pwd 
+/Users/ebabaars 
+z3r10p4% ls 
+Desktop		Documents	Downloads	Library		Users		cd		ebabaars	ex00		ex01		ex02		ex03		ex04		ex05		ex06		ex07		exit		goinfre		ls		pwd		z 
+z3r10p4% cd ex07 
+z3r10p4% ls 
+cat	diff	sw.diff 
+z3r10p4% rm -f cat diff sw.diff 
+z3r10p4% ls 
+z3r10p4% touch a.text 
+z3r10p4% ls 
+a.text 
+z3r10p4% cd a.txt 
+cd: no such file or directory: a.txt 
+z3r10p4% rm -f a.text 
+z3r10p4% ls 
+z3r10p4% touch a.txt 
+z3r10p4% cd a.txt 
+cd: not a directory: a.txt 
+z3r10p4% >cat -e a 
+STARWARS$ 
+Episode IV, A NEW HOPE It is a period of civil war.$ 
+$ 
+Rebel spaceships, striking from a hidden base, have won their first victory against the evil 
+Galactic Empire.$ 
+During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the 
+DEATH STAR,$ 
+an armored space station with enough power to destroy an entire planet.$ 
+$ 
+Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of 
+the stolen plans that can save her people and restore freedom to the galaxy...$ 
+$ 
+zsh: command not found: -e 
+zsh: command not found: STARWARS$ 
+zsh: command not found: Episode 
+zsh: command not found: $ 
+zsh: command not found: Rebel 
+zsh: command not found: Galactic 
+zsh: command not found: During 
+zsh: command not found: the 
+zsh: command not found: $ 
+z3r10p4% touch b.txt 
+z3r10p4% >cat -e a 
+STARWARS$ 
+Episode IV, A NEW HOPE It is a period of civil war.$ 
+$ 
+Rebel spaceships, striking from a hidden base, have won their first victory against the evil 
+Galactic Empire.$ 
+During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the 
+DEATH STAR,$ 
+an armored space station with enough power to destroy an entire planet.$ 
+$ 
+Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of 
+the stolen plans that can save her people and restore freedom to the galaxy...$ 
+$ 
+cat -e b.txt > b.txt 
+zsh: command not found: -e 
+zsh: command not found: STARWARS$ 
+zsh: command not found: Episode 
+zsh: command not found: $ 
+zsh: command not found: Rebel 
+zsh: command not found: Galactic 
+zsh: command not found: During 
+zsh: command not found: the 
+zsh: command not found: $ 
+z3r10p4% diff a b >sw.diff 
+diff: a: No such file or directory 
+diff: b: No such file or directory 
+z3r10p4% >diff a b < sw.diff 
+zsh: command not found: a 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		Users		ex01		ex05		goinfre 
+Documents	cd		ex02		ex06		ls 
+Downloads	ebabaars	ex03		ex07		pwd 
+Library		ex00		ex04		exit		z 
+z3r10p4% ex07 
+zsh: command not found: ex07 
+z3r10p4% cd ex07 
+z3r10p4% ls 
+a.txt	b.txt	cat	diff	sw.diff 
+z3r10p4% rm -f a.txt 
+z3r10p4% rm -f b.txt 
+z3r10p4% rm -f cat diff sw.diff 
+z3r10p4% ls 
+z3r10p4% touch a.txt 
+z3r10p4% %>cat -e a 
+STARWARS$ 
+Episode IV, A NEW HOPE It is a period of civil war.$ 
+$ 
+Rebel spaceships, striking from a hidden base, have won their first victory against the evil 
+Galactic Empire.$ 
+During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the 
+DEATH STAR,$ 
+an armored space station with enough power to destroy an entire planet.$ 
+$ 
+Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of 
+the stolen plans that can save her people and restore freedom to the galaxy...$ 
+$ 
+fg: no current job 
+zsh: command not found: STARWARS$ 
+zsh: command not found: Episode 
+zsh: command not found: $ 
+zsh: command not found: Rebel 
+zsh: command not found: Galactic 
+zsh: command not found: During 
+zsh: command not found: the 
+zsh: command not found: $ 
+z3r10p4% touch b.txt 
+z3r10p4% %>cat -e a 
+STARWARS$ 
+Episode IV, A NEW HOPE It is a period of civil war.$ 
+$ 
+Rebel spaceships, striking from a hidden base, have won their first victory against the evil 
+Galactic Empire.$ 
+During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the 
+DEATH STAR,$ 
+an armored space station with enough power to destroy an entire planet.$ 
+$ 
+Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of 
+the stolen plans that can save her people and restore freedom to the galaxy...$ 
+$ 
+fg: no current job 
+zsh: command not found: STARWARS$ 
+zsh: command not found: Episode 
+zsh: command not found: $ 
+zsh: command not found: Rebel 
+zsh: command not found: Galactic 
+zsh: command not found: During 
+zsh: command not found: the 
+zsh: command not found: $ 
+z3r10p4% cat -e a.txt > b.txt 
+z3r10p4% >diff a b > sw.diff 
+zsh: command not found: a 
+z3r10p4% diff a b > sw.diff 
+diff: a: No such file or directory 
+diff: b: No such file or directory 
+z3r10p4% diff a.txt b.txt > sw.diff 
+z3r10p4% patch -p1 < sw.diff 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		Users		ex01		ex05		goinfre 
+Documents	cd		ex02		ex06		ls 
+Downloads	ebabaars	ex03		ex07		pwd 
+Library		ex00		ex04		exit		z 
+z3r10p4% mkdir ex08/  
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex00 
+z3r10p4% ls 
+z 
+z3r10p4% cat z 
+Z 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex01 
+z3r10p4% ls 
+-m		202006012342.01	l-40		testShell00.tar 
+-t		a-		testShell00	testShell1100 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex03 
+z3r10p4% ls 
+klist.txt 
+z3r10p4% cat klist.txt 
+Credentials cache: API:D4331D80-5B74-46BE-805A-2B01944DC502 
+        Principal: ebabaars@42LYON.FR 
+ 
+  Issued                Expires               Principal 
+Aug 10 14:59:12 2020  Aug 11 00:59:12 2020  krbtgt/42LYON.FR@42LYON.FR 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex02 
+z3r10p4% ls 
+-		test0.txt	test2.txt	test4.txt	test6 
+exo2.tar	test1.txt	test3.txt	test5.txt 
+z3r10p4% ls -l 
+total 16 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 22:20 - 
+-rw-r--r--  1 ebabaars  2020  4608 Aug 10 14:51 exo2.tar 
+-rw-r--r--  1 ebabaars  2020     0 Aug 10 14:50 test0.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 21:46 test1.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 22:45 test2.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 23:44 test3.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 23:43 test4.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 23:44 test5.txt 
+-rw-r--r--  1 ebabaars  2020     0 Jun  1 22:20 test6 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex04 
+z3r10p4% ls 
+midLS.txt 
+z3r10p4% cat midLS.txt 
+midLS.txt,%                                                                     z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% cd ex05 
+z3r10p4% ls 
+git_commit.sh	script.sh 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		z 
+Documents	ebabaars	ex04		exit 
+Downloads	ex00		ex05		goinfre 
+Library		ex01		ex06		ls 
+Users		ex02		ex07		pwd 
+z3r10p4% mkdir ex09/ 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		pwd 
+Documents	ebabaars	ex04		ex09		z 
+Downloads	ex00		ex05		exit 
+Library		ex01		ex06		goinfre 
+Users		ex02		ex07		ls 
+z3r10p4% cd ex08 
+z3r10p4% touch clean 
+z3r10p4% ls 
+clean 
+z3r10p4% echo "find ./ -type f -name '*~' -o -name '#*#'" > jtm.txt 
+z3r10p4% cat clean 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		cd		ex03		ex08		pwd 
+Documents	ebabaars	ex04		ex09		z 
+Downloads	ex00		ex05		exit 
+Library		ex01		ex06		goinfre 
+Users		ex02		ex07		ls 
+z3r10p4% cd ex09  
+z3r10p4% ls 
+z3r10p4% touch ft_magic 
+z3r10p4% file -c 42 -m 42 <ft.magic> 
+zsh: parse error near `\n' 
+z3r10p4% 0       search/1/c      =<?php                  PHP script text 
+!:mime  text/x-unittest 
+zsh: illegal modifier: m 
+z3r10p4%  
+z3r10p4% 0 search/16 42 File containing "42" 
+!:mime text/x-42 
+zsh: illegal modifier: m 
+z3r10p4% search /16 42 file containing "42"  
+zsh: command not found: search 
+z3r10p4% 0 search/16 42 file containing "42" 
+zsh: command not found: 0 
+z3r10p4% >search/16 42 file containing "42"  
+zsh: no such file or directory: search/16 
+z3r10p4% 0 search/16 42 file containing "42" !:mime text/x-42 
+zsh: illegal modifier: m 
+z3r10p4% $ file -m my-magic test.42  
+test.42: File containing "42", ASCII text 
+zsh: command not found: $ 
+zsh: command not found: test.42: 
+z3r10p4% file -C -m <ft_magic> 
+zsh: parse error near `\n' 
+z3r10p4% ls  
+ft_magic 
+z3r10p4% cd .. 
+z3r10p4% ls 
+Desktop		Documents	Downloads	Library		Users		cd		ebabaars	ex00		ex01		ex02		ex03		ex04		ex05		ex06		ex07		ex08		ex09		exit		goinfre		ls		pwd		z 
+z3r10p4%  
+z3r10p4%  
